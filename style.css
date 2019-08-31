@@ -1,0 +1,46 @@
+/* body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0%;
+	min-width: 100mw;
+	min-height: 100vh;
+	background-color: #EA4F9D;
+}
+#logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: #F9EB10;
+
+}
+#logo img{
+	width: 70%;
+} */
+
+body{
+	background-color: #EA4F9D;
+}
+
+#thefile {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+#canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+audio {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
