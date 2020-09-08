@@ -3,7 +3,6 @@
 // var logo = document.getElementById('logo').style
 // var arr, src, context, analyser
 
-
 // window.addEventListener('click', () => {
 // 	if (!context) {
 // 		preparation();
@@ -37,12 +36,11 @@
 
 // }
 
-window.onload = function() {
-  
+window.onload = function () {
   var file = document.getElementById("thefile");
   var audio = document.getElementById("audio");
-  
-  file.onchange = function() {
+
+  file.onchange = function () {
     var files = this.files;
     audio.src = URL.createObjectURL(files[0]);
     audio.load();
@@ -54,8 +52,8 @@ window.onload = function() {
     var canvas = document.getElementById("canvas");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-		var ctx = canvas.getContext("2d");
-		// ctx.fillStyle = #EA4F9D;
+    var ctx = canvas.getContext("2d");
+    // ctx.fillStyle = #EA4F9D;
 
     src.connect(analyser);
     analyser.connect(context.destination);
@@ -86,10 +84,10 @@ window.onload = function() {
 
       for (var i = 0; i < bufferLength; i++) {
         barHeight = dataArray[i];
-        
-        var r = barHeight + (25 * (i/bufferLength));
-        var g = 250 * (i/bufferLength);
-        var b = 50;
+
+        var r = barHeight + 35 * (i / bufferLength);
+        var g = 250 * (i / bufferLength);
+        var b = 110;
 
         ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
         ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
